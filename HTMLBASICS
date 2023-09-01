@@ -10,25 +10,34 @@
       <body>
         <main>
           <h1>CatPhotoApp</h1>
+          <!-- section element used for grouping content -->
           <section>
             <h2>Cat Photos</h2>
-            <!-- TODO: Add link to cat photos -->
+            <!-- <a href> used for making hyperlinks -->
+             <!-- target attribute is for specifying where the linked content should be displayed -->
+             <!-- in this cases the value "-blank" indicates that linked content should be opened in new tab-->      
             <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
             <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
           </section>
+
           <section>
             <h2>Cat Lists</h2>
             <h3>Things cats love:</h3>
+            <!-- ul = unoreder list (the list won't be ordered by number) -->
+            <!-- ul bullet points your list -->
             <ul>
               <li>cat nip</li>
               <li>laser pointers</li>
               <li>lasagna</li>
             </ul>
+            <!-- figure element helps with grouping media content(img) and its caption -->   
             <figure>
               <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+              <!-- <em> element makes the text italic -->   
               <figcaption>Cats <em>love</em> lasagna.</figcaption>  
             </figure>
             <h3>Top 3 things cats hate:</h3>
+            <!-- ol = ordered list  -->   
             <ol>
               <li>flea treatment</li>
               <li>thunder</li>
@@ -36,23 +45,36 @@
             </ol>
             <figure>
               <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+              <!-- <strong> element makes the text bold -->   
               <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
             </figure>
           </section>
           <section>
             <h2>Cat Form</h2>
+            <!-- users submitted form will be sent that link below -->   
             <form action="https://freecatphotoapp.com/submit-cat-photo">
+                <!-- fieldset element used inside form element -->  
+                <!--  It provides a way to semantically and visually organize form controls, -->  
+                <!-- such as input fields, checkboxes, radio buttons --> 
+                 <!-- basically creates a box -->
               <fieldset>
+                 <!-- legend element is a discription for the box -->
                 <legend>Is your cat an indoor or outdoor cat?</legend>
+                 <!-- label element to implement the input element -->
+                  <!-- type="radio" makes the checkbox into check circle-->
+                   <!-- name attribute assiocates the two inputs together-->
+                    <!-- checked makes it that input to be checked without user input-->
                 <label><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
                 <label><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label>
               </fieldset>
               <fieldset>
                 <legend>What's your cat's personality?</legend>
+                 <!-- id is connect to for's value so the text gets assiocated -->
                 <input id="loving" type="checkbox" name="personality" value="loving" checked> <label for="loving">Loving</label>
                 <input id="lazy" type="checkbox" name="personality" value="lazy"> <label for="lazy">Lazy</label>
                 <input id="energetic" type="checkbox" name="personality" value="energetic"> <label for="energetic">Energetic</label>
               </fieldset>
+               <!-- text input -->
               <input type="text" name="catphotourl" placeholder="cat photo URL" required>
               <button type="submit">Submit</button>
             </form>
@@ -64,5 +86,5 @@
           </p>
         </footer>
       </body>
-      
+
     </html>
